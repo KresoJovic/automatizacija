@@ -48,9 +48,15 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        platformName: 'Android',
-        'appium:deviceName': 'Pixel 2',
-        'appium:app': join(process.cwd(), './ApiDemos-debug.apk')
+           // capabilities for local Appium web tests on an Android Emulator
+           platformName: 'Android',
+           //browserName: 'Chrome',
+           'appium:deviceName': 'Android GoogleAPI Emulator',
+           'appium:platformVersion': '13.0',
+           'appium:automationName': 'UiAutomator2',
+           'appium:app': '/Users/kresimirjovic/Documents/appium_jsss/ApiDemos-debug.apk',
+           
+       
     }],
     //
     // ===================
